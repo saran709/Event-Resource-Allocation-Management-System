@@ -378,5 +378,29 @@
     "assignedEventId": null,
     "lastLogin": "2026-09-04T07:50:03.035Z",
     "id": "mtmnltln4k5p"
+  },
+  {
+    "name": "Rachel Zane",
+    "email": "rachel.admin.1788508596324@apexevents.com",
+    "password": "password123",
+    "role": "EVENT_ADMIN",
+    "department": "Regional Operations",
+    "status": "Active",
+    "eventAdminId": null,
+    "assignedEventId": null,
+    "lastLogin": "2026-09-04T07:56:36.327Z",
+    "id": "mtmnu92f3yk6"
+  },
+  {
+    "name": "Harvey Specter",
+    "email": "harvey.org.1788508596343@apexevents.com",
+    "password": "password123",
+    "role": "ORGANIZER",
+    "department": "VIP Coordination",
+    "status": "Active",
+    "eventAdminId": "usr2",
+    "assignedEventId": null,
+    "lastLogin": "2026-09-04T07:56:36.345Z",
+    "id": "mtmnu92xzhi4"
   }
 ]
