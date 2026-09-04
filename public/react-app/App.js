@@ -549,7 +549,7 @@ function App() {
     sessionStorage.removeItem('erams_auth');
     sessionStorage.removeItem('erams_persona');
     setAuth(false);
-    showToast('Signed out of session', 'info');
+    window.location.href = '/';
   };
 
   // Move Kanban Card Column
@@ -3161,13 +3161,7 @@ function App() {
             fontSize: '0.78rem',
             color: 'var(--slate-600)'
           },
-          onClick: () => {
-            localStorage.removeItem('erams_auth');
-            localStorage.removeItem('erams_persona');
-            sessionStorage.removeItem('erams_auth');
-            sessionStorage.removeItem('erams_persona');
-            window.location.href = '/';
-          },
+          onClick: handleLogout,
           title: "Logout and return to Public Landing Page",
           children: /*#__PURE__*/_jsxDEV("span", {
             children: "🚪 Sign Out to Landing Page"

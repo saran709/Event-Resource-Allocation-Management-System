@@ -410,7 +410,7 @@ function App() {
     sessionStorage.removeItem('erams_auth');
     sessionStorage.removeItem('erams_persona');
     setAuth(false);
-    showToast('Signed out of session', 'info');
+    window.location.href = '/';
   };
 
   // Move Kanban Card Column
@@ -2064,13 +2064,7 @@ function App() {
             type="button"
             className="btn btn-secondary btn-small w-100 mt-2 d-flex align-items-center justify-content-center gap-1"
             style={{ fontSize: '0.78rem', color: 'var(--slate-600)' }}
-            onClick={() => {
-              localStorage.removeItem('erams_auth');
-              localStorage.removeItem('erams_persona');
-              sessionStorage.removeItem('erams_auth');
-              sessionStorage.removeItem('erams_persona');
-              window.location.href = '/';
-            }}
+            onClick={handleLogout}
             title="Logout and return to Public Landing Page"
           >
             <span>🚪 Sign Out to Landing Page</span>
