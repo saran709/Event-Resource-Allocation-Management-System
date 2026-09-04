@@ -1,0 +1,16 @@
+[
+  {
+    "id": "al4",
+    "eventId": "ev2",
+    "equipmentId": "eq2",
+    "quantity": 2,
+    "notes": "Spotlighting auction table"
+  },
+  {
+    "id": "al5",
+    "eventId": "ev2",
+    "equipmentId": "eq5",
+    "quantity": 150,
+    "notes": "Ballroom round tables"
+  }
+]

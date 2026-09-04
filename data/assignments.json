@@ -1,0 +1,16 @@
+[
+  {
+    "id": "as3",
+    "eventId": "ev2",
+    "staffId": "st1",
+    "role": "Guest Relations Coordinator",
+    "notes": "Gala welcoming desk"
+  },
+  {
+    "id": "as4",
+    "eventId": "ev2",
+    "staffId": "st3",
+    "role": "Stage Manager",
+    "notes": "Overseeing auctions timeline"
+  }
+]

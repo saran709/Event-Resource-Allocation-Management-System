@@ -1,0 +1,23 @@
+[
+  {
+    "id": "vn1",
+    "name": "Grand Ballroom",
+    "capacity": 500,
+    "amenities": "A/V Stage, Catering Prep, High-speed Wifi",
+    "pricing": 2500
+  },
+  {
+    "id": "vn2",
+    "name": "Meeting Room A",
+    "capacity": 40,
+    "amenities": "UHD Screen, Whiteboard, Video Conference System",
+    "pricing": 400
+  },
+  {
+    "id": "vn3",
+    "name": "Outdoor Plaza Arena",
+    "capacity": 1000,
+    "amenities": "Tent Hookups, High-power Outlets, Security Fence",
+    "pricing": 3500
+  }
+]

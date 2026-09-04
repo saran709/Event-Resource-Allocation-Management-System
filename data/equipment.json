@@ -1,0 +1,44 @@
+[
+  {
+    "id": "eq1",
+    "name": "Sound System Array",
+    "category": "Audio",
+    "totalStock": 5,
+    "rentalRate": 150
+  },
+  {
+    "id": "eq2",
+    "name": "Stage Lighting Kit",
+    "category": "Lighting",
+    "totalStock": 8,
+    "rentalRate": 100
+  },
+  {
+    "id": "eq3",
+    "name": "UHD Projector 10K",
+    "category": "Video",
+    "totalStock": 4,
+    "rentalRate": 200
+  },
+  {
+    "id": "eq4",
+    "name": "Wireless Microphone Set",
+    "category": "Audio",
+    "totalStock": 15,
+    "rentalRate": 30
+  },
+  {
+    "id": "eq5",
+    "name": "Foldable Event Chairs",
+    "category": "Furniture",
+    "totalStock": 200,
+    "rentalRate": 2
+  },
+  {
+    "id": "eq6",
+    "name": "Stage Platforms",
+    "category": "Infrastructure",
+    "totalStock": 10,
+    "rentalRate": 50
+  }
+]

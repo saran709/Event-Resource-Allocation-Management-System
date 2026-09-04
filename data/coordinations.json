@@ -1,0 +1,18 @@
+[
+  {
+    "id": "co3",
+    "eventId": "ev2",
+    "vendorId": "ve1",
+    "cost": 8000,
+    "details": "Premium 3-course plated dinner, open bar",
+    "paymentStatus": "Paid"
+  },
+  {
+    "id": "co4",
+    "eventId": "ev2",
+    "vendorId": "ve3",
+    "cost": 3500,
+    "details": "Floral table arrangements and red carpet styling",
+    "paymentStatus": "Paid"
+  }
+]

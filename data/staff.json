@@ -1,0 +1,37 @@
+[
+  {
+    "id": "st1",
+    "name": "Alice Vance",
+    "role": "Event Coordinator",
+    "contact": "+1-555-0199",
+    "dailyRate": 300
+  },
+  {
+    "id": "st2",
+    "name": "Bob Miller",
+    "role": "A/V Technician",
+    "contact": "+1-555-0142",
+    "dailyRate": 250
+  },
+  {
+    "id": "st3",
+    "name": "Charlie Green",
+    "role": "Stage Manager",
+    "contact": "+1-555-0187",
+    "dailyRate": 280
+  },
+  {
+    "id": "st4",
+    "name": "Diana Prince",
+    "role": "Security Lead",
+    "contact": "+1-555-0111",
+    "dailyRate": 220
+  },
+  {
+    "id": "st5",
+    "name": "Ethan Hunt",
+    "role": "Operations Specialist",
+    "contact": "+1-555-0107",
+    "dailyRate": 350
+  }
+]

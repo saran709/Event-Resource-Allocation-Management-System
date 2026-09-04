@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Social Meta Tags -->
+  <title>Event Resource Allocation Management System | Event Information & Portal</title>
+  <meta name="description" content="A centralized platform for managing events, resources, staff, equipment, venues, vendors, schedules, and event activities efficiently.">
+  <meta name="keywords" content="Event Resource Allocation Management System, APEX, Events, Upcoming Events, Ongoing Events, Completed Events">
+  
+  <!-- Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. NAVBAR (Clean & Simple: Logo/Name on Left, ONLY ONE "Login" on Right)
+       ========================================================================= -->
+  <header class="site-header" id="navbar">
+    <div class="header-inner">
+      <a href="/" class="brand-link" aria-label="Event Resource Allocation Management System">
+        <div class="brand-icon" title="APEX CLIENT EVENTS PORTAL">▲</div>
+        <div class="brand-text">
+          <span class="brand-name">Event Resource Allocation Management System</span>
+          <span class="brand-sub">APEX Public Events Portal</span>
+        </div>
+      </a>
+
+      <!-- EXACTLY ONE Login Button on Right -->
+      <div class="nav-right">
+        <a href="/app" class="btn-login-single" id="nav-login-btn" aria-label="Login to system">
+          Login
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. HERO / INTRODUCTION
+       ========================================================================= -->
+  <section class="intro-section" id="introduction">
+    <div class="container">
+      <div class="intro-content">
+        <h1 class="intro-heading">
+          Event Resource Allocation Management System
+        </h1>
+        <p class="intro-lead">
+          A centralized platform for managing events, resources, staff, equipment, venues, vendors, schedules, and event activities efficiently.
+        </p>
+        <div class="intro-grid">
+          <div class="intro-card">
+            <div class="intro-card-icon">📌</div>
+            <h2 class="intro-card-title">What is this system?</h2>
+            <p class="intro-card-text">
+              An institutional management platform designed to plan, track, coordinate, and oversee events and operational resources from end to end.
+            </p>
+          </div>
+          <div class="intro-card">
+            <div class="intro-card-icon">⚙️</div>
+            <h2 class="intro-card-title">What is it used for?</h2>
+            <p class="intro-card-text">
+              Organizing schedules, allocating specialized personnel, tracking equipment inventories, managing venue bookings, and coordinating vendors.
+            </p>
+          </div>
+          <div class="intro-card">
+            <div class="intro-card-icon">📅</div>
+            <h2 class="intro-card-title">What can visitors view?</h2>
+            <p class="intro-card-text">
+              Up-to-date schedules for all upcoming conferences, ongoing summits, and completed organizational activities with dates, times, and venue details.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. ABOUT THE SYSTEM
+       ========================================================================= -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About the System</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="about-card">
+        <p class="about-description">
+          The <strong>Event Resource Allocation Management System</strong> provides a centralized platform for organizing and monitoring events. It helps manage event information, resource allocation, staff assignments, equipment, venues, vendors, schedules, and other event-related activities.
+        </p>
+        <div class="about-pillars">
+          <div class="pillar-item">
+            <span class="pillar-bullet">•</span>
+            <div>
+              <strong>Structured Organization:</strong> Ensures every event has clearly defined dates, venues, organizers, and requirements.
+            </div>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-bullet">•</span>
+            <div>
+              <strong>Resource Optimization:</strong> Coordinates equipment availability, staging facilities, and staffing allocations.
+            </div>
+          </div>
+          <div class="pillar-item">
+            <span class="pillar-bullet">•</span>
+            <div>
+              <strong>Transparent Timelines:</strong> Automatically tracks lifecycle milestones from upcoming preparation to live execution and completion.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. MAIN EVENTS CONTAINER (UPCOMING, ONGOING, COMPLETED)
+       ========================================================================= -->
+  <main class="events-main-section" id="events">
+    <div class="container">
+      
+      <!-- Global Loading State -->
+      <div id="events-loading" class="state-container loading-state" role="status" aria-live="polite">
+        <div class="loading-spinner"></div>
+        <p class="state-text">Loading events...</p>
+      </div>
+
+      <!-- Global Error State -->
+      <div id="events-error" class="state-container error-state" style="display: none;" role="alert">
+        <div class="state-icon">⚠️</div>
+        <h3 class="state-title">Unable to load events.</h3>
+        <p class="state-sub">Please check your network connection and try again.</p>
+        <button type="button" class="btn-retry" id="retry-fetch-btn" onclick="fetchAndDisplayEvents()">
+          Try Again
+        </button>
+      </div>
+
+      <!-- Events Content Wrapper -->
+      <div id="events-content" style="display: none;">
+        
+        <!-- SECTION 1: UPCOMING EVENTS -->
+        <section class="event-category-block" id="upcoming-events-section">
+          <div class="category-header">
+            <div class="category-title-wrap">
+              <span class="category-icon">📅</span>
+              <h2 class="category-heading">Upcoming Events</h2>
+            </div>
+            <span class="count-badge" id="upcoming-count">0 Events</span>
+          </div>
+          <p class="category-sub">Events scheduled for future dates. Sorted by nearest upcoming date first.</p>
+          <div class="events-grid" id="upcoming-events-grid">
+            <!-- Rendered dynamically -->
+          </div>
+        </section>
+
+        <!-- SECTION 2: ONGOING EVENTS -->
+        <section class="event-category-block" id="ongoing-events-section">
+          <div class="category-header">
+            <div class="category-title-wrap">
+              <span class="category-icon">⚡</span>
+              <h2 class="category-heading">Ongoing Events</h2>
+            </div>
+            <span class="count-badge badge-ongoing" id="ongoing-count">0 Events</span>
+          </div>
+          <p class="category-sub">Events currently taking place today.</p>
+          <div class="events-grid" id="ongoing-events-grid">
+            <!-- Rendered dynamically -->
+          </div>
+        </section>
+
+        <!-- SECTION 3: COMPLETED EVENTS -->
+        <section class="event-category-block" id="completed-events-section">
+          <div class="category-header">
+            <div class="category-title-wrap">
+              <span class="category-icon">✓</span>
+              <h2 class="category-heading">Completed Events</h2>
+            </div>
+            <span class="count-badge badge-completed" id="completed-count">0 Events</span>
+          </div>
+          <p class="category-sub">Previously concluded events and activities. Sorted by most recent completion.</p>
+          <div class="events-grid" id="completed-events-grid">
+            <!-- Rendered dynamically -->
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       5. FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-info">
+        <div class="footer-brand-title">Event Resource Allocation Management System</div>
+        <p class="footer-copy">
+          &copy; <span id="current-year">2026</span> Event Resource Allocation Management System. All rights reserved.
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="#about" class="footer-link">About</a>
+        <a href="#upcoming-events-section" class="footer-link">Upcoming Events</a>
+        <a href="#ongoing-events-section" class="footer-link">Ongoing Events</a>
+        <a href="#completed-events-section" class="footer-link">Completed Events</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Engine -->
+  <script src="landing.js"></script>
+</body>
+</html>

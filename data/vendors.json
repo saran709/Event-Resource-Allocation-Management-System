@@ -1,0 +1,30 @@
+[
+  {
+    "id": "ve1",
+    "name": "Premier Catering Services",
+    "category": "Catering",
+    "contact": "John Chef",
+    "email": "john@premiercatering.com"
+  },
+  {
+    "id": "ve2",
+    "name": "Sound & Light Masters",
+    "category": "AV & Production",
+    "contact": "Sarah Spark",
+    "email": "contact@slmasters.com"
+  },
+  {
+    "id": "ve3",
+    "name": "Elite Decor & Florals",
+    "category": "Decor & Design",
+    "contact": "Marcus Bloom",
+    "email": "info@elitedecor.com"
+  },
+  {
+    "id": "ve4",
+    "name": "SafeGuard Security",
+    "category": "Security",
+    "contact": "Frank Guard",
+    "email": "frank@safeguard.com"
+  }
+]
