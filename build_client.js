@@ -6,11 +6,13 @@ const JSX_PATH = path.join(__dirname, 'public', 'react-app', 'App.jsx');
 const JS_OUTPUT_PATH = path.join(__dirname, 'public', 'react-app', 'App.js');
 
 function build() {
-  console.log('⚡ Pre-compiling React JSX with Babel for 0ms compilation lag...');
+  console.log('⚡ Pre-compiling React JSX (runtime: classic for UMD React)...');
   const jsxCode = fs.readFileSync(JSX_PATH, 'utf-8');
   
   const result = babel.transformSync(jsxCode, {
-    presets: ['@babel/preset-react']
+    presets: [
+      ['@babel/preset-react', { runtime: 'classic' }]
+    ]
   });
 
   fs.writeFileSync(JS_OUTPUT_PATH, result.code, 'utf-8');

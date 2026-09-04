@@ -255,5 +255,21 @@
     "attachments": [],
     "createdAt": "2026-09-04T07:56:36.363Z",
     "id": "mtmnu93fp8ea"
+  },
+  {
+    "eventId": "ev1",
+    "staffId": "st2",
+    "assignedStaffId": "st2",
+    "organizerId": "usr3",
+    "title": "Inspect VIP Audio Monitor",
+    "description": "Check wireless frequency bands",
+    "deadline": "2026-09-15",
+    "priority": "High",
+    "status": "Pending",
+    "completionNotes": "",
+    "comments": [],
+    "attachments": [],
+    "createdAt": "2026-09-04T08:03:17.960Z",
+    "id": "mtmo2uywx3qv"
   }
 ]
