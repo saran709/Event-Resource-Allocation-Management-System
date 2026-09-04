@@ -5,6 +5,20 @@
     "role": "SUPER_ADMIN",
     "action": "User Created",
     "entity": "User",
+    "entityId": "mtmnltl0yx7x",
+    "category": "Security & Operations",
+    "details": "Created user Rachel Zane with role EVENT_ADMIN.",
+    "severity": "Info",
+    "ip": "::1",
+    "timestamp": "2026-09-04T07:50:03.015Z",
+    "id": "mtmnltl3diz2"
+  },
+  {
+    "actor": "Sarah Miller",
+    "actorId": "usr1",
+    "role": "SUPER_ADMIN",
+    "action": "User Created",
+    "entity": "User",
     "entityId": "mtmnhq0zzy3u",
     "category": "Security & Operations",
     "details": "Created user Rachel Zane with role EVENT_ADMIN.",
@@ -1482,5 +1496,33 @@
     "ip": "::1",
     "timestamp": "2026-09-04T07:46:51.820Z",
     "id": "mtmnhq24s9v3"
+  },
+  {
+    "actor": "Marcus Vance",
+    "actorId": "usr2",
+    "role": "EVENT_ADMIN",
+    "action": "User Created",
+    "entity": "User",
+    "entityId": "mtmnltln4k5p",
+    "category": "Security & Operations",
+    "details": "Created user Harvey Specter with role ORGANIZER.",
+    "severity": "Info",
+    "ip": "::1",
+    "timestamp": "2026-09-04T07:50:03.037Z",
+    "id": "mtmnltlpz15q"
+  },
+  {
+    "actor": "Elena Rostova",
+    "actorId": "usr3",
+    "role": "ORGANIZER",
+    "action": "Task Created",
+    "entity": "Task",
+    "entityId": "mtmnltm78r4p",
+    "category": "Security & Operations",
+    "details": "Task 'Inspect VIP Audio Monitor' assigned to staff for event ev1.",
+    "severity": "Info",
+    "ip": "::1",
+    "timestamp": "2026-09-04T07:50:03.057Z",
+    "id": "mtmnltm91wvc"
   }
 ]

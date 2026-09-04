@@ -1,5 +1,14 @@
 [
   {
+    "id": "notif-1788508199061",
+    "userId": "all",
+    "title": "Schedule Update",
+    "message": "Stage lighting rehearsal scheduled",
+    "type": "info",
+    "isRead": false,
+    "createdAt": "2026-09-04T07:49:59.061Z"
+  },
+  {
     "id": "notif-1788508008181",
     "userId": "all",
     "title": "Schedule Update",
